@@ -35,7 +35,6 @@ cd ..
 cd "$wd0"
 
 
-
 # -----------------------------------------------------------------------------
 # The variables below control postrun.sh so only need to be defined on the
 # central node
