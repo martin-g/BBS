@@ -1,0 +1,7 @@
+# APT Always nice to have packages
+
+# tree
+# manpages-dev    # man pages for C standard library
+# mlocate         # Provides the locate command
+
+dnf install -y tree mlocate
