@@ -11,4 +11,4 @@
 # default-jdk
 
 
-dnf install -y libpng-devel libpng-tools libtiff-devel tcl-devel tk-devel java-17-openjdk
+dnf install -y libpng-devel libpng-tools libtiff-devel tcl-devel tk-devel java-17-openjdk java-17-openjdk-devel
