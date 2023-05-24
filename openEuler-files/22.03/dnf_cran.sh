@@ -29,4 +29,4 @@
 # libarchive-dev          # for archive, a dependency of AlpsNMR
 
 
-dnf install -y cmake mesa-libGLU-devel librsvg2-devel gmp-devel openssl-devel libxml2-devel v8-devel mpfr-devel fftw-devel libpq-devel ImageMagick-devel geos-devel proj-devel libgit2-devel protobuf-devel protobuf-compiler glpk-devel hiredis-devel libarchive-devel poppler-cpp-devel ImageMagick-c++-devel mysql-devel
+dnf install -y cmake mesa-libGLU-devel librsvg2-devel gmp-devel openssl-devel libxml2-devel v8-devel mpfr-devel fftw-devel libpq-devel ImageMagick-devel geos-devel proj-devel proj-nad libgit2-devel protobuf-devel protobuf-compiler glpk-devel hiredis-devel libarchive-devel poppler-cpp-devel ImageMagick-c++-devel mysql-devel
