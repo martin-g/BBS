@@ -29,4 +29,4 @@
 # libarchive-dev          # for archive, a dependency of AlpsNMR
 
 
-dnf install -y cmake mesa-libGLU-devel librsvg2-devel gmp-devel openssl-devel libxml2-devel v8-devel mpfr-devel fftw-devel libpq-devel ImageMagick-devel geos-devel proj-devel proj-nad sqlite-devel libgit2-devel protobuf-devel protobuf-compiler glpk-devel hiredis-devel libarchive-devel poppler-cpp-devel ImageMagick-c++-devel mysql-devel texlive-pdfcrop openmpi-devel texlive-titling texlive-framed texlive-nowidow texlive-parnotes texlive-preprint texlive-marginfix texlive-xstring
+dnf install -y cmake mesa-libGLU-devel librsvg2-devel gmp-devel openssl-devel libxml2-devel v8-devel mpfr-devel fftw-devel libpq-devel ImageMagick-devel geos-devel proj-devel proj-nad sqlite-devel libgit2-devel protobuf-devel protobuf-compiler glpk-devel hiredis-devel libarchive-devel poppler-cpp-devel ImageMagick-c++-devel mysql-devel texlive-pdfcrop openmpi-devel texlive-titling texlive-framed texlive-nowidow texlive-parnotes texlive-preprint texlive-marginfix texlive-xstring texlive-comment
