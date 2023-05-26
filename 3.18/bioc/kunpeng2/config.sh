@@ -3,7 +3,12 @@
 # Settings for kunpeng2 (Linux ARM64)
 # ===================================
 
-
+# Settings specific for openEuler START
+export LIBSBML_CFLAGS="-I/usr/local/include/sbml"
+export LIBSBML_LIBS="-lsbml"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib64
+export PATH=$PATH:/usr/lib64/openmpi/bin
+# Settings specific for openEuler END
 
 #set -x  # print commands and their arguments as they are executed
 
