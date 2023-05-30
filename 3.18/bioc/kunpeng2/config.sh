@@ -6,8 +6,10 @@
 # Settings specific for openEuler START
 export LIBSBML_CFLAGS="-I/usr/local/include/sbml"
 export LIBSBML_LIBS="-lsbml"
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib64
-export PATH=$PATH:/usr/lib64/openmpi/bin
+export UDUNITS2_INCLUDE="/home/biocbuild/libudunits-2/include"
+export UDUNITS2_LIBS="/home/biocbuild/libudunits-2/lib"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib64:$UDUNITS2_LIBS
+export PATH=$PATH:/usr/lib64/openmpi/bin:/home/biocbuild/libudunits-2/bin
 # Settings specific for openEuler END
 
 #set -x  # print commands and their arguments as they are executed
@@ -17,7 +19,7 @@ export BBS_DEBUG="0"
 export BBS_NODE_HOSTNAME="kunpeng2"
 export BBS_USER="biocbuild"
 export BBS_WORK_TOPDIR="/home/biocbuild/bbs-3.18-bioc"
-export BBS_R_HOME="/home/biocbuild/R/R-4.3.0-bin"
+export BBS_R_HOME="/home/biocbuild/R/R-4.3.0"
 export R_LIBS="$BBS_R_HOME/site-library"
 export BBS_NB_CPU=30         # 32 cores are available
 export BBS_BUILD_NB_CPU=14   # 32 cores are available
