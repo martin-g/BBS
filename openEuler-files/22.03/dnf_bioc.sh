@@ -31,4 +31,4 @@
 # collectl                    # for Rcollectl
 
 
-dnf install -y firefox graphviz graphviz-devel gtkmm24-devel gsl-devel automake netcdf-devel eigen3-devel fribidi-devel fuse fuse-devel rsync
+dnf install -y firefox graphviz graphviz-devel gtkmm24-devel gsl-devel automake netcdf-devel eigen3-devel fribidi-devel fuse fuse-devel rsync ffmpeg-devel
