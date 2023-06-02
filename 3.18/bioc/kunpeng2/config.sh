@@ -4,11 +4,11 @@
 # ===================================
 
 # Settings specific for openEuler START
-export LIBSBML_CFLAGS="-I/usr/local/include/sbml"
-export LIBSBML_LIBS="-lsbml"
+export LIBSBML_CFLAGS=$(pkg-config --cflags ~/libsbml-from-git/lib/pkgconfig/libsbml.pc)
+export LIBSBML_LIBS=$(pkg-config --libs ~/libsbml-from-git/lib/pkgconfig/libsbml.pc)
 export UDUNITS2_INCLUDE="/home/biocbuild/libudunits-2/include"
 export UDUNITS2_LIBS="/home/biocbuild/libudunits-2/lib"
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib64:$UDUNITS2_LIBS
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib64:$UDUNITS2_LIBS:/home/biocbuild/libsbml-from-git/lib
 export PATH=$PATH:/usr/lib64/openmpi/bin:/home/biocbuild/libudunits-2/bin
 # Settings specific for openEuler END
 
