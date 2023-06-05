@@ -63,5 +63,10 @@ allnodes = {
                    'Arch'    : "aarch64",
                    'Platform': "aarch64-linux-gnu",
                    'pkgType' : "source",
-                   'encoding': "utf_8"},
+                   'encoding': "utf-8"},
+    'kunpeng2':   {'OS'      : "Linux (openEuler 22.03 LTS-SP1)",
+                   'Arch'    : "aarch64",
+                   'Platform': "aarch64-linux-gnu",
+                   'pkgType' : "source",
+                   'encoding': "utf-8"}
 }

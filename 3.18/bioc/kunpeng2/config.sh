@@ -1,21 +1,31 @@
 #!/usr/bin/env bash
 # ===================================
-# Settings for kunpeng1 (Linux ARM64)
+# Settings for kunpeng2 (Linux ARM64)
 # ===================================
 
-
+# Settings specific for openEuler START
+export LIBSBML_CFLAGS=$(pkg-config --cflags ~/libsbml-from-git/lib/pkgconfig/libsbml.pc)
+export LIBSBML_LIBS=$(pkg-config --libs ~/libsbml-from-git/lib/pkgconfig/libsbml.pc)
+export UDUNITS2_INCLUDE="/home/biocbuild/libudunits-2/include"
+export UDUNITS2_LIBS="/home/biocbuild/libudunits-2/lib"
+export OPEN_BABEL_HOME="/home/biocbuild/openbabel-3.1.1"
+export OPENBABEL_CFLAGS="-I$OPEN_BABEL_HOME/include/openbabel3 -L$OPEN_BABEL_HOME/lib"
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib64:$UDUNITS2_LIBS:/home/biocbuild/libsbml-from-git/lib:$OPEN_BABEL_HOME/lib
+export PATH=$PATH:/usr/lib64/openmpi/bin:/home/biocbuild/libudunits-2/bin:$HOME/.dotnet:$OPEN_BABEL_HOME/bin
+# Settings specific for openEuler END
 
 #set -x  # print commands and their arguments as they are executed
 
 export BBS_DEBUG="0"
 
-export BBS_NODE_HOSTNAME="kunpeng1"
+export BBS_NODE_HOSTNAME="kunpeng2"
 export BBS_USER="biocbuild"
-export BBS_WORK_TOPDIR="/home/biocbuild/bbs-3.17-bioc"
-export BBS_R_HOME="$BBS_WORK_TOPDIR/R"
-export BBS_NB_CPU=8         # 8 cores are available
-# export BBS_BUILD_NB_CPU=26  # 8 cores are available
-# export BBS_CHECK_NB_CPU=30  # 8 cores are available
+export BBS_WORK_TOPDIR="/home/biocbuild/bbs-3.18-bioc"
+export BBS_R_HOME="/home/biocbuild/R/R-4.3.0"
+export R_LIBS="$BBS_R_HOME/site-library"
+export BBS_NB_CPU=30         # 32 cores are available
+export BBS_BUILD_NB_CPU=14   # 32 cores are available
+export BBS_CHECK_NB_CPU=14   # 32 cores are available
 
 # Central build node is nebbiolo1 at DFCI.
 #export BBS_CENTRAL_RHOST="nebbiolo1"
@@ -25,7 +35,8 @@ export BBS_RSH_CMD="ssh -F /home/biocbuild/.ssh/config"
 export BBS_CENTRAL_ROOT_URL="http://$BBS_CENTRAL_RHOST"
 export BBS_PRODUCT_TRANSMISSION_MODE="asynchronous"
 
-
+export BBS_BUILD_TIMEOUT=2400
+export BBS_CHECK_TIMEOUT=2400
 
 # Shared settings (by all Unix nodes).
 
@@ -33,6 +44,7 @@ wd0=$(pwd)
 cd ..
 . ./config.sh
 cd "$wd0"
+
 
 
 # -----------------------------------------------------------------------------
@@ -45,7 +57,7 @@ cd "$wd0"
 
 # Control generation of the report:
 #export BBS_REPORT_NODES="nebbiolo1 palomino3:bin merida1:bin"
-export BBS_REPORT_NODES="kunpeng1"
+export BBS_REPORT_NODES="kunpeng2"
 export BBS_REPORT_PATH="$BBS_CENTRAL_RDIR/report"
 export BBS_REPORT_CSS="$BBS_HOME/$BBS_BIOC_VERSION/report.css"
 export BBS_REPORT_BGIMG="$BBS_HOME/images/DEVEL3b.png"
@@ -64,4 +76,5 @@ export BBS_REPORT_JS="$BBS_HOME/$BBS_BIOC_VERSION/report.js"
 # TODO: when BBS_NOTIFY_NODES is not defined then take all the build nodes
 #export BBS_NOTIFY_NODES="nebbiolo1"
 #export BBS_PUBLISHED_REPORT_URL="https://master.bioconductor.org/$BBS_PUBLISHED_REPORT_RELATIVEURL"
+
 

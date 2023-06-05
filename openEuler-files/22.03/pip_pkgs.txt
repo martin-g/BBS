@@ -1,0 +1,20 @@
+# PIP packages required by CRAN or Bioconductor packages
+numpy                       # BiocSklearn, MOFA2
+scipy                       # MOFA2, Python sklearn package
+scikit-learn                # BiocSklearn, MOFA2 (rather than sklearn)
+h5py == 3.8.0               # BiocSklearn, MOFA2
+pandas                      # BiocSklearn, MOFA2
+mofapy2                     # MOFA2
+tensorflow                  # scAlign, DeepPINCS
+h5pyd                       # rhdf5client
+nbconvert                   # CRAN nbconvertR for BioC destiny
+jupyter                     # CRAN nbconvertR for BioC destiny 
+matplotlib                  # CRAN phateR for BioC phemd
+phate                       # CRAN phateR for BioC phemd
+torch                       # Bioc APL
+leidenalg                   # Bioc scBubbletree
+packaging                   # Bioc seqArchR
+hail                        # BiocHail
+stdlib-list == 0.6.0        # Bioc velociraptor
+anndata == 0.7.4            # Bioc velociraptor
+umap-learn == 0.4.6         # Bioc velociraptor
