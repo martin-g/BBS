@@ -16,7 +16,7 @@
 # libmysqlclient-dev      # for RMySQL
 # libpq-dev               # for RPostgreSQL, RPostgres
 # libmagick++-dev         # for magick
-# libgeos-dev             # for rgeos
+# libgeos-dev             # for rgeos. Removed with https://github.com/Bioconductor/BBS/pull/301
 # libproj-dev             # for proj4
 # libgdal-dev             # for sf
 # libpoppler-cpp-dev      # for pdftools
@@ -29,4 +29,4 @@
 # libarchive-dev          # for archive, a dependency of AlpsNMR
 
 
-dnf install -y cmake mesa-libGLU-devel librsvg2-devel gmp-devel openssl-devel libxml2-devel v8-devel mpfr-devel fftw-devel libpq-devel ImageMagick-devel geos-devel proj-devel proj-nad sqlite-devel libgit2-devel protobuf-devel protobuf-compiler glpk-devel hiredis-devel libarchive-devel poppler-cpp-devel ImageMagick-c++-devel mysql-devel texlive-pdfcrop openmpi-devel texlive-titling texlive-framed texlive-nowidow texlive-parnotes texlive-preprint texlive-marginfix texlive-xstring texlive-comment texlive-multirow texlive-a4wide texlive-threeparttable texlive-epstopdf texinfo-tex texlive-wrapfig texlive-isorot texlive-textpos texlive-sectsty texlive-subfigure texlive-esint texlive-vmargin texlive-picinpar mesa-dri-drivers texlive-datetime texlive-relsize texlive-upquote texlive-sidecap texlive-appendix texlive-endfloat texlive-biblatex texlive-tocbibind texlive-blkarray texlive-forloop  texlive-tocloft texlive-ccaption texlive-ulem texlive-tabu texlive-sourcecodepro texlive-moreverb texlive-algorithm2e texlive-layouts texlive-cleveref texlive-appendix  texlive-relsize texlive-makebox texlive-todonotes texlive-threeparttablex texlive-ifoddpage texlive-adjustbox texlive-subfloat
+dnf install -y cmake mesa-libGLU-devel librsvg2-devel gmp-devel openssl-devel libxml2-devel v8-devel mpfr-devel fftw-devel libpq-devel ImageMagick-devel proj-devel proj-nad sqlite-devel libgit2-devel protobuf-devel protobuf-compiler glpk-devel hiredis-devel libarchive-devel poppler-cpp-devel ImageMagick-c++-devel mysql-devel texlive-pdfcrop openmpi-devel texlive-titling texlive-framed texlive-nowidow texlive-parnotes texlive-preprint texlive-marginfix texlive-xstring texlive-comment texlive-multirow texlive-a4wide texlive-threeparttable texlive-epstopdf texinfo-tex texlive-wrapfig texlive-isorot texlive-textpos texlive-sectsty texlive-subfigure texlive-esint texlive-vmargin texlive-picinpar mesa-dri-drivers texlive-datetime texlive-relsize texlive-upquote texlive-sidecap texlive-appendix texlive-endfloat texlive-biblatex texlive-tocbibind texlive-blkarray texlive-forloop  texlive-tocloft texlive-ccaption texlive-ulem texlive-tabu texlive-sourcecodepro texlive-moreverb texlive-algorithm2e texlive-layouts texlive-cleveref texlive-appendix  texlive-relsize texlive-makebox texlive-todonotes texlive-threeparttablex texlive-ifoddpage texlive-adjustbox texlive-subfloat
