@@ -28,6 +28,16 @@ ${HOME}/BBS/utils/R-fix-flags.sh
 
 ```
 
+#### After compilation
+
+Follow the steps at:
+
+* https://github.com/bioconductor/BBS/blob/devel/Doc/Prepare-Ubuntu-22.04-HOWTO.md#after-compilation
+* https://github.com/bioconductor/BBS/blob/devel/Doc/Prepare-Ubuntu-22.04-HOWTO.md#basic-testing
+* https://github.com/bioconductor/BBS/blob/devel/Doc/Prepare-Ubuntu-22.04-HOWTO.md#install-biocmanager--bioccheck
+* https://github.com/bioconductor/BBS/blob/devel/Doc/Prepare-Ubuntu-22.04-HOWTO.md#optional-more-testing
+* https://github.com/bioconductor/BBS/blob/devel/Doc/Prepare-Ubuntu-22.04-HOWTO.md#optional-flush-the-data-caches
+
 ### Update Bioconductor configs
 
 Copy https://github.com/Bioconductor/BBS/tree/devel/3.19/bioc/kunpeng2 to the new `3.xy` folder, e.g. `https://github.com/Bioconductor/BBS/tree/devel/3.20/bioc/kunpeng2` 
