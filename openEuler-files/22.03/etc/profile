@@ -1,5 +1,6 @@
 # From https://github.com/Bioconductor/BBS/blob/af1f643c3ed4ab6fb5f7d450b801f43812a35b88/Doc/Prepare-Ubuntu-22.04-HOWTO.md#set-reticulate_python-in-etcprofile
-export RETICULATE_PYTHON="/usr/bin/python3"
+# DO NOT use the system Python. Let Reticulate install its own Python: https://stat.ethz.ch/pipermail/bioc-devel/2024-February/020161.html
+# export RETICULATE_PYTHON="/usr/bin/python3"
 
 export LIBSBML_CFLAGS=$(pkg-config --cflags /home/biocbuild/libsbml-from-git/lib/pkgconfig/libsbml.pc)
 export LIBSBML_LIBS=$(pkg-config --libs /home/biocbuild/libsbml-from-git/lib/pkgconfig/libsbml.pc)
