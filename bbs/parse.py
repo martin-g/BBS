@@ -300,7 +300,7 @@ def get_Maintainer_from_pkgsrctree(pkgsrctree):
 
 def get_Maintainer_name_from_pkgsrctree(pkgsrctree):
     maintainer = get_Maintainer_from_pkgsrctree(pkgsrctree)
-    regex = '(.*\S)\s*<(.*)>\s*'
+    regex = '(.*\\S)\\s*<(.*)>\\s*'
     p = re.compile(regex)
     m = p.match(maintainer)
     if m:
@@ -309,7 +309,7 @@ def get_Maintainer_name_from_pkgsrctree(pkgsrctree):
 
 def get_Maintainer_email_from_pkgsrctree(pkgsrctree):
     maintainer = get_Maintainer_from_pkgsrctree(pkgsrctree)
-    regex = '(.*\S)\s*<(.*)>\s*'
+    regex = '(.*\\S)\\s*<(.*)>\\s*'
     p = re.compile(regex)
     m = p.match(maintainer)
     if m:
