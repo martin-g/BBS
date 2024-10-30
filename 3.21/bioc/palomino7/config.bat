@@ -7,7 +7,7 @@ set BBS_DEBUG=0
 
 set BBS_NODE_HOSTNAME=palomino7
 set BBS_USER=biocbuild
-set BBS_WORK_TOPDIR=F:\biocbuild\bbs-3.21-bioc
+set BBS_WORK_TOPDIR=E:\biocbuild\bbs-3.21-bioc
 set BBS_R_HOME=%BBS_WORK_TOPDIR%\R
 
 @rem palomino7 has 32 logical CPUs.
@@ -18,7 +18,7 @@ set BBS_EXTRA_CHECK_OPTIONS=--no-vignettes
 
 @rem Central build node is bbscentral1 on Jetstream2.
 set BBS_CENTRAL_RHOST=bbscentral1
-set BBS_RSH_CMD=ssh -F /cygdrive/f/biocbuild/.ssh/config
+set BBS_RSH_CMD=ssh -F /cygdrive/e/biocbuild/.ssh/config
 set BBS_CENTRAL_ROOT_URL=http://149.165.171.124
 set BBS_PRODUCT_TRANSMISSION_MODE=asynchronous
 
