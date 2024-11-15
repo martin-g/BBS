@@ -124,23 +124,29 @@ def supported_nodes(pkg):
 
 def make_report_title(report_nodes):
     buildtype = BBSvars.buildtype
-    if buildtype == "bioc-longtests":
-        title = "Long Tests"
-    elif buildtype == "workflows":
+    if buildtype == "workflows":
         title = "Workflows build"
     elif buildtype == "books":
         title = "Books build"
+    elif buildtype == "bioc-longtests":
+        title = "Long Tests"
     elif buildtype == "bioc-mac-arm64":
         title = "Mac ARM64 build"
+    elif buildtype == "bioc-rapid":
+        title = 'Test Builds (Linux only) of a subset of BioC 3.21<BR>' + \
+                'using R 4.5 (devel) + _R_USE_STRICT_R_HEADERS_=true + ' + \
+                '_R_CXX_USE_NO_REMAP_=true<BR>' + \
+                'Report updated every 6 hours'
+        return title
+    elif buildtype == "bioc-testing":
+        title = '"Blame Jeroen" build/check'
     else:
         nnodes = 0
         for node in report_nodes.split(' '):
             if node == "":
                 continue
             nnodes += 1
-        if buildtype == "bioc-testing":
-            title = '"Blame Jeroen" build/check'
-        elif nnodes != 1:
+        if nnodes != 1:
             title = "Multiple platform build/check"
         else:
             title = "Build/check"
@@ -172,7 +178,7 @@ def stage_label(stage):
 ## we run 'buildsrc' (STAGE3) and 'checksrc' (STAGE4) but we only display
 ## the results of 'checksrc' (CHECK column on the report).
 def stages_to_display(buildtype):
-    if buildtype in ["data-annotation", "data-experiment", "books"]:
+    if buildtype in ["data-annotation", "data-experiment", "books", "bioc-rapid"]:
         return ['install', 'buildsrc', 'checksrc']
     if buildtype == "workflows":
         return ['install', 'buildsrc']
@@ -183,7 +189,7 @@ def stages_to_display(buildtype):
 ### Whether to display the package propagation status led or not for the
 ### given buildtype.
 def display_propagation_status(buildtype):
-    return buildtype not in ["bioc-longtests", "bioc-testing", "cran"]
+    return buildtype not in ["bioc-longtests", "bioc-rapid", "bioc-testing", "cran"]
 
 def ncol_to_display(buildtype):
     return len(stages_to_display(buildtype)) + \

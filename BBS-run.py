@@ -448,7 +448,7 @@ def STAGE2():
     #  BBSvars.buildtype == 'bioc'):
     #    CreateREnvironFiles()
 
-    if BBSvars.buildtype in ['bioc', 'bioc-testing']:
+    if BBSvars.buildtype in ['bioc', 'bioc-rapid', 'bioc-testing']:
         # Update non-target packages.
         print('BBS> [STAGE2] Update non-target packages (1st run) ...', end=' ')
         sys.stdout.flush()
@@ -494,7 +494,7 @@ def STAGE2():
     print('BBS> [STAGE2] cd BBS_WORK_TOPDIR/STAGE2_tmp')
     os.chdir(STAGE2_tmp)
 
-    if BBSvars.buildtype in ['bioc', 'bioc-testing']:
+    if BBSvars.buildtype in ['bioc', 'bioc-rapid', 'bioc-testing']:
         # Try again to update non-target packages (some updates could have
         # failed in the previous attempt because of dependency issues).
         print('BBS> [STAGE2] Update non-target packages (2nd run) ...', end=' ')
