@@ -1,6 +1,6 @@
 #!/bin/bash
 # ======================
-# Settings for kjohnson3
+# Settings for kjohnson1
 # ======================
 
 
@@ -9,12 +9,12 @@
 
 export BBS_DEBUG="0"
 
-export BBS_NODE_HOSTNAME="kjohnson3"
+export BBS_NODE_HOSTNAME="kjohnson1"
 export BBS_USER="biocbuild"
 export BBS_WORK_TOPDIR="/Users/biocbuild/bbs-3.20-bioc"
 export BBS_R_HOME="/Library/Frameworks/R.framework/Resources"
 
-# kjohnson3 has 24 logical CPUs (16 performance, 8 efficiency).
+# kjohnson1 has 24 logical CPUs (16 performance, 8 efficiency).
 export BBS_NB_CPU=10
 export BBS_BUILD_NB_CPU=8
 export BBS_CHECK_NB_CPU=9
