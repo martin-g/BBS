@@ -58,13 +58,14 @@ from time import sleep
 
 
 HOSTNAME = "kjohnson3"
-LOG_PATH = "/Users/biocbuild/bbs-3.20-bioc/log/build.log"
+BIOC_VERSION = "3.21"
+LOG_PATH = f"/Users/biocbuild/bbs-{BIOC_VERSION}-bioc/log/build.log"
 
 def build(logger):
     logger.debug("START job")
     yyyymmdd = date.today().strftime('%Y%m%d')
-    run_path = f"/Users/biocbuild/BBS/3.20/bioc/{HOSTNAME}"
-    log_path = f"/Users/biocbuild/bbs-3.20-bioc/log/{HOSTNAME}-{yyyymmdd}-run.log"
+    run_path = f"/Users/biocbuild/BBS/{BIOC_VERSION}/bioc/{HOSTNAME}"
+    log_path = f"/Users/biocbuild/bbs-{BIOC_VERSION}-bioc/log/{HOSTNAME}-{yyyymmdd}-run.log"
     job = ["/bin/bash", "--login", "-c", f"cd {run_path} && ./run.sh >> {log_path} 2>&1"]
     result = run(job, stdout=PIPE, stderr=STDOUT)
     if result.stdout.decode():
