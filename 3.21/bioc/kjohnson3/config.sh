@@ -15,9 +15,9 @@ export BBS_WORK_TOPDIR="/Users/biocbuild/bbs-3.21-bioc"
 export BBS_R_HOME="/Library/Frameworks/R.framework/Resources"
 
 # kjohnson3 has 24 logical CPUs (16 performance, 8 efficiency).
-export BBS_NB_CPU=10
-export BBS_BUILD_NB_CPU=8
-export BBS_CHECK_NB_CPU=9
+export BBS_NB_CPU=13
+export BBS_BUILD_NB_CPU=11
+export BBS_CHECK_NB_CPU=12
 export BBS_EXTRA_CHECK_OPTIONS="--no-vignettes"
 
 # Central build node is bbscentral1 on Jetstream2.
