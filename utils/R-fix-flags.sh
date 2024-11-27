@@ -4,16 +4,18 @@ set -e  # Exit immediately if a simple command exits with a non-zero status
 
 new_flag="-Wall -Werror=format-security"
 
+echo "Add '$new_flag' to *FLAGS?"
+echo ""
+echo "IMPORTANT NOTE: Only do this for BioC >= 3.21 + R >= 4.5."
+echo "If you're installing R < 4.5 (for BioC < 3.21 builds), then"
+echo "use the R-fix-flags-old.sh script instead."
+echo ""
 while true; do
-	echo "Add '$new_flag' to *FLAGS?"
-	echo "IMPORTANT NOTE: Only do this for BioC >= 3.21 + R >= 4.5."
-	echo "If you're installing R < 4.5 (for BioC < 3.21 builds), then"
-	echo "use the R-fix-flags-old.sh script instead."
-	read -p "y/n? " yn
+	read -p "Please answer yes or no: " yn
 	case $yn in
 		[Yy]* ) break;;
 		[Nn]* ) exit;;
-		* ) echo "Please answer yes or no.";;
+		* ) ;;
 	esac
 done
 
