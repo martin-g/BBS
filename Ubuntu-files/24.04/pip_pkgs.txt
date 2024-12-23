@@ -1,5 +1,6 @@
 # PIP packages required by CRAN or Bioconductor packages
 
+owlready2                   # ontoProc
+scikit-learn                # seqArchR
 tensorflow                  # DeepPINCS
 torch                       # Bioc APL
-owlready2                   # ontoProc
