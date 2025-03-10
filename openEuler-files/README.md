@@ -1,13 +1,13 @@
 Please also see https://github.com/bio-arm/dockerfiles
 
-`kunpeng2` is a VM with openEuler 22.03 SP1 ARM64. It is used as builder node for Bioconductor project to test packages' builds and checks on Linux ARM64
+`kunpeng2` is a VM with openEuler 24.03 SP1 ARM64. It is used as builder node for Bioconductor project to test packages' builds and checks on Linux ARM64
 
 ## Update Bioconductor version
 
 ### R language installation
 
 Even minor versions of Bioconductor like 3.16 and 3.18 use a stable version of R language, like 4.1 and 4.3.
-Odd minor versions of Bioconductor like 3.17 and 3.19 use a devel version of R language, like 4.2 and 4.4.
+Odd minor versions of Bioconductor like 3.17 and 3.21 use a devel version of R language, like 4.2 and 4.4.
 
 For stable versions of R go to https://cran.r-project.org/src/base/R-4/ and download the latest version.
 For devel versions go to https://stat.ethz.ch/R/daily/ and download the newest one.
@@ -42,10 +42,10 @@ Follow the steps at:
 
 ### Update Bioconductor configs
 
-Copy https://github.com/Bioconductor/BBS/tree/devel/3.19/bioc/kunpeng2 to the new `3.xy` folder, e.g. `https://github.com/Bioconductor/BBS/tree/devel/3.20/bioc/kunpeng2` 
+Copy https://github.com/Bioconductor/BBS/tree/devel/3.21/bioc/kunpeng2 to the new `3.xy` folder, e.g. `https://github.com/Bioconductor/BBS/tree/devel/3.20/bioc/kunpeng2` 
 and adapt the contents of `config.sh`. The entries which need update are:
 
-1) export BBS_WORK_TOPDIR="/home/biocbuild/bbs-3.19-bioc"         # update 3.19 to the actual version
+1) export BBS_WORK_TOPDIR="/home/biocbuild/bbs-3.21-bioc"         # update 3.21 to the actual version
 2) export BBS_R_HOME="/home/biocbuild/R/R-4.4-devel-2023.11.02"   # update the path to the latest R installation
 3) export BBS_CENTRAL_ROOT_URL="http://155.52.207.165"            # ask the Bioc core team for the IP address to use
 
@@ -59,7 +59,7 @@ and adapt the contents of `config.sh`. The entries which need update are:
 
 ```
 [bioc]
-path = /home/biocbuild/bbs-3.19-bioc/products-out/
+path = /home/biocbuild/bbs-3.21-bioc/products-out/
 comment = Bioconductor report output
 read only = yes
 alist = yes
@@ -74,10 +74,10 @@ alist = yes
 
 <VirtualHost *:80>
         ServerName ...
-        DocumentRoot /home/biocbuild/bbs-3.19-bioc
+        DocumentRoot /home/biocbuild/bbs-3.21-bioc
         #CustomLog /tmp/httpd-access.log combined
         #ErrorLog /tmp/httpd-error.log
-    <Directory /home/biocbuild/bbs-3.19-bioc/products-out>
+    <Directory /home/biocbuild/bbs-3.21-bioc/products-out>
             Options +Indexes +FollowSymLinks
             AllowOverride None
             Require all granted
@@ -93,7 +93,7 @@ alist = yes
 </VirtualHost>
 ```
 
-Make sure to replace `3.19` in the configs with the respective actual version of Bioconductor!
+Make sure to replace `3.21` in the configs with the respective actual version of Bioconductor!
 
 ### Update crontab
 
@@ -112,10 +112,10 @@ PATH=/home/biocbuild/bin:/usr/local/bin:/usr/bin:/bin
 # -------------------------
 
 # run:
-00 19 * * 0-5 /bin/bash --login -c 'cd /home/biocbuild/BBS/3.19/bioc/`hostname` && ./run.sh >>/home/biocbuild/bbs-3.19-bioc/log/`hostname`-`date +\%Y\%m\%d`-run.log 2>&1'
+00 19 * * 0-5 /bin/bash --login -c 'cd /home/biocbuild/BBS/3.21/bioc/`hostname` && ./run.sh >>/home/biocbuild/bbs-3.21-bioc/log/`hostname`-`date +\%Y\%m\%d`-run.log 2>&1'
 
 # update to latest `devel`
-00 14 * * 0-5 /bin/bash --login -c 'cd /home/biocbuild/BBS/ && git stash && git pull --rebase && git stash pop >>/home/biocbuild/bbs-3.19-bioc/log/`hostname`-`date +\%Y\%m\%d`-git.log 2>&1'
+00 14 * * 0-5 /bin/bash --login -c 'cd /home/biocbuild/BBS/ && git stash && git pull --rebase && git stash pop >>/home/biocbuild/bbs-3.21-bioc/log/`hostname`-`date +\%Y\%m\%d`-git.log 2>&1'
 ```
 
-When updating Bioconductor version change occurrences of `3.19` to the actual Bioc version!
+When updating Bioconductor version change occurrences of `3.21` to the actual Bioc version!
