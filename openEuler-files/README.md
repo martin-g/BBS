@@ -119,3 +119,7 @@ PATH=/home/biocbuild/bin:/usr/local/bin:/usr/bin:/bin
 ```
 
 When updating Bioconductor version change occurrences of `3.21` to the actual Bioc version!
+
+### Install Dotnet 
+
+Go to https://dotnet.microsoft.com/en-us/download/dotnet/9.0 and install the arm64 build
