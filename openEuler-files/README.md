@@ -134,6 +134,7 @@ After=network.target
 
 [Service]
 ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24
+Environment="DISPLAY=:99"
 
 [Install]
 WantedBy=multi-user.target
