@@ -168,7 +168,8 @@ export OPEN_BABEL_DATADIR=$OPEN_BABEL_HOME/share/openbabel/3.1.0
 export OPENBABEL_CFLAGS="-I$OPEN_BABEL_INCDIR -L$OPEN_BABEL_LIBDIR"
 export BABEL_LIBDIR="/usr/lib64/openbabel3/"
 export LIBICONV_HOME="$BIOC/libiconv-1.17"
-export LD_LIBRARY_PATH=/opt/ohpc/pub/compiler/gcc/14.2.0/lib64:$BIOC/icu-75.1-hf9b3779_0/lib:$BIOC/libgdal-3.6.2-h2dbb9bc_3/lib:$BIOC/proj-6.2.1-h465d533_0/lib:$BIOC/lerc-3.0-h22f4aa5_0/lib:$BIOC/kealib-1.5.0-h1b42569_1/lib:$BIOC/tiledb-2.3.3-h3849020_3/lib:$BIOC/libkml-1.3.0-hadc4260_7/lib:$BIOC/hdf4-4.2.13-h96bad59_4/lib:$BIOC/jpeg-9e-h998d150_3/lib:/usr/local/lib64:$UDUNITS2_LIBS:$BIOC/libsbml-from-git/lib:$OPEN_BABEL_HOME/lib:$LIBICONV_HOME/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/opt/ohpc/pub/compiler/gcc/14.2.0/lib64:$BIOC/icu-75.1-hf9b3779_0/lib:$BIOC/proj-6.2.1-h465d533_0/lib:$BIOC/lerc-3.0-h22f4aa5_0/lib:$BIOC/kealib-1.5.0-h1b42569_1/lib:$BIOC/tiledb-2.3.3-h3849020_3/lib:$BIOC/libkml-1.3.0-hadc4260_7/lib:$BIOC/hdf4-4.2.13-h96bad59_4/lib:$BIOC/jpeg-9e-h998d150_3/lib:/usr/local/lib64:$UDUNITS2_LIBS:$BIOC/libsbml-from-git/lib:$OPEN_BABEL_HOME/lib:$LIBICONV_HOME/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$BIOC/gdal/.pixi/envs/default/lib"
 export PATH=$PATH:/usr/lib64/openmpi/bin:$BIOC/libudunits-2/bin:/home/biocbuild/.dotnet:$OPEN_BABEL_HOME/bin
 export LC_TIME="en_GB"
 export TMPDIR="/home/biocbuild/tmp"
@@ -178,8 +179,11 @@ export ISR_pwd=1notCRAN
 export GENEPREDTOGTF_BINARY="/home/biocbuild/bin/genePredToGtf"
 
 export PATH=$PATH:/opt/meme/bin
-export PATH=$PATH:/opt/meme/libexec/meme-5.5.5
 export PATH=$PATH:/home/biocbuild/dotnet
+export PATH=$PATH:/opt/meme/libexec/meme-5.5.5
+export PATH="$PATH:$BIOC/gdal/.pixi/envs/default/bin"
 export MEME_BIN=/opt/meme/bin
+export CPATH="$CPATH:$BIOC/gdal/.pixi/envs/default/include"
+export PROJ_LIB="$BIOC/gdal/.pixi/envs/default/share/proj"
 export DISPLAY=:99
 ```
