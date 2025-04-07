@@ -123,3 +123,24 @@ When updating Bioconductor version change occurrences of `3.21` to the actual Bi
 ### Install Dotnet 
 
 Go to https://dotnet.microsoft.com/en-us/download/dotnet/9.0 and install the arm64 build
+
+### Install Xvfb
+
+/etc/systemd/system/Xvfb.service
+```
+[Unit]
+Description=X Virtual Frame Buffer Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/Xvfb :99 -screen 0 1024x768x24
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```
+dnf install xorg-x11-server-Xvfb
+systemctl enable Xvfb.service
+systemctl start Xvfb.service
+```
