@@ -182,6 +182,7 @@ export PATH=$PATH:/opt/meme/bin
 export PATH=$PATH:/home/biocbuild/dotnet
 export PATH=$PATH:/opt/meme/libexec/meme-5.5.5
 export PATH="$PATH:$BIOC/gdal/.pixi/envs/default/bin"
+export PATH=$PATH:/home/biocbuild/bioconductor/quarto-1.7.32/bin
 export MEME_BIN=/opt/meme/bin
 export CPATH="$CPATH:$BIOC/gdal/.pixi/envs/default/include"
 export PROJ_LIB="$BIOC/gdal/.pixi/envs/default/share/proj"
